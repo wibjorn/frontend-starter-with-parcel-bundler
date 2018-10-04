@@ -1,0 +1,254 @@
+$system-grey-00: hsla(0, 0%, 100%, 1);
+$system-grey-02: hsla(0, 0%, 98%, 1);
+$system-grey-05: hsla(0, 0%, 95%, 1);
+$system-grey-10: hsla(0, 0%, 89%, 1);
+$system-grey-20: hsla(0, 0%, 78%, 1);
+$system-grey-30: hsla(0, 0%, 67%, 1);
+$system-grey-40: hsla(0, 0%, 57%, 1);
+$system-grey-50: hsla(0, 0%, 46%, 1); // base
+$system-grey-60: hsla(0, 0%, 37%, 1);
+$system-grey-70: hsla(0, 0%, 27%, 1);
+$system-grey-80: hsla(0, 0%, 18%, 1);
+$system-grey-90: hsla(0, 0%, 9%, 1);
+
+// Accent shades
+$system-blue-10: hsla(205, 100%, 94%, 1);
+$system-blue-20: hsla(206, 100%, 82%, 1);
+$system-blue-30: hsla(206, 100%, 65%, 1);
+$system-blue-40: hsla(206, 100%, 50%, 1);
+$system-blue-50: hsla(206, 100%, 35%, 1); // base
+$system-blue-60: hsla(206, 100%, 28%, 1);
+$system-blue-70: hsla(206, 100%, 20%, 1);
+$system-blue-80: hsla(206, 100%, 15%, 1);
+$system-blue-90: hsla(206, 100%, 9%, 1);
+
+// Highlight colors
+$system-purple-10: hsla(262, 46%, 90%, 1);
+$system-purple-20: hsla(262, 46%, 80%, 1);
+$system-purple-30: hsla(262, 46%, 70%, 1);
+$system-purple-40: hsla(262, 46%, 65%, 1);
+$system-purple-50: hsla(262, 46%, 58%, 1); // base
+$system-purple-60: hsla(262, 46%, 50%, 1);
+$system-purple-70: hsla(262, 46%, 37%, 1);
+$system-purple-80: hsla(262, 46%, 25%, 1);
+$system-purple-90: hsla(262, 46%, 17%, 1);
+
+// Success colors
+$system-green-10: hsla(120, 77%, 90%, 1);
+$system-green-20: hsla(120, 77%, 80%, 1);
+$system-green-30: hsla(120, 77%, 60%, 1);
+$system-green-40: hsla(120, 77%, 40%, 1);
+$system-green-50: hsla(120, 77%, 30%, 1); // base
+$system-green-60: hsla(120, 77%, 25%, 1);
+$system-green-70: hsla(120, 77%, 20%, 1);
+$system-green-80: hsla(120, 77%, 15%, 1);
+$system-green-90: hsla(120, 77%, 10%, 1);
+
+// Info colors
+$system-teal-10: hsla(173, 100%, 90%, 1);
+$system-teal-20: hsla(173, 100%, 80%, 1);
+$system-teal-30: hsla(173, 100%, 50%, 1);
+$system-teal-40: hsla(173, 100%, 40%, 1);
+$system-teal-50: hsla(173, 100%, 26%, 1); // base
+$system-teal-60: hsla(173, 100%, 20%, 1);
+$system-teal-70: hsla(173, 100%, 15%, 1);
+$system-teal-80: hsla(173, 100%, 12%, 1);
+$system-teal-90: hsla(173, 100%, 08%, 1);
+
+// Caution colors
+$system-yellow-10: hsla(44, 100%, 90%, 1);
+$system-yellow-20: hsla(44, 100%, 80%, 1);
+$system-yellow-30: hsla(44, 100%, 70%, 1);
+$system-yellow-40: hsla(44, 100%, 60%, 1);
+$system-yellow-50: hsla(44, 100%, 50%, 1); // base
+$system-yellow-60: hsla(44, 100%, 40%, 1);
+$system-yellow-70: hsla(44, 100%, 30%, 1);
+$system-yellow-80: hsla(44, 100%, 20%, 1);
+$system-yellow-90: hsla(44, 100%, 10%, 1);
+
+// Danger colors
+$system-red-10: hsla(16, 99%, 90%, 1);
+$system-red-20: hsla(16, 99%, 80%, 1);
+$system-red-30: hsla(16, 99%, 70%, 1);
+$system-red-40: hsla(16, 99%, 55%, 1);
+$system-red-50: hsla(16, 99%, 43%, 1); // base
+$system-red-60: hsla(16, 99%, 35%, 1);
+$system-red-70: hsla(16, 99%, 25%, 1);
+$system-red-80: hsla(16, 99%, 20%, 1);
+$system-red-90: hsla(16, 99%, 15%, 1);
+
+$undefined: #fff; // remove me before continuing
+
+// text
+// text-muted
+// body-background
+// body-background-muted ?
+// pre-background
+// code-header-background ?
+// or code-background ?
+
+$theme2: (
+	'light': (
+		'primary': $undefined,
+		'primary-background': $undefined,
+		'primary-color': $undefined,
+		'primary-hover': $undefined,
+		'primary-active': $undefined,
+		'primary-box-shadow': $undefined,
+        'primary-invert': $undefined,
+
+		'secondary': $undefined,
+		'secondary-background': $undefined,
+		'secondary-color': $undefined,
+		'secondary-hover': $undefined,
+		'secondary-active': $undefined,
+		'secondary-box-shadow': $undefined,
+        'secondary-invert': $undefined,
+
+		'success': $undefined,
+		'success-background': $undefined,
+		'success-color': $undefined,
+		'success-hover': $undefined,
+		'success-active': $undefined,
+		'success-box-shadow': $undefined,
+        'success-invert': $undefined,
+
+		'info': $undefined,
+		'info-background': $undefined,
+		'info-color': $undefined,
+		'info-hover': $undefined,
+		'info-active': $undefined,
+		'info-box-shadow': $undefined,
+        'info-invert': $undefined,
+
+		'dark': $undefined,
+		'dark-background': $undefined,
+		'dark-color': $undefined,
+		'dark-hover': $undefined,
+		'dark-active': $undefined,
+		'dark-box-shadow': $undefined,
+        'dark-invert': $undefined,
+
+		'warning': $undefined,
+		'warning-background': $undefined,
+		'warning-color': $undefined,
+		'warning-hover': $undefined,
+		'warning-active': $undefined,
+		'warning-box-shadow': $undefined,
+        'warning-invert': $undefined,
+
+		'danger': $undefined,
+		'danger-background': $undefined,
+		'danger-color': $undefined,
+		'danger-hover': $undefined,
+		'danger-active': $undefined,
+		'danger-box-shadow': $undefined,
+	),
+	'night': (
+		'primary': $undefined,
+		'primary-background': $undefined,
+		'primary-color': $undefined,
+		'primary-hover': $undefined,
+		'primary-active': $undefined,
+		'primary-box-shadow': $undefined,
+        'primary-invert': $undefined,
+
+		'secondary': $undefined,
+		'secondary-background': $undefined,
+		'secondary-color': $undefined,
+		'secondary-hover': $undefined,
+		'secondary-active': $undefined,
+		'secondary-box-shadow': $undefined,
+        'secondary-invert': $undefined,
+
+		'success': $undefined,
+		'success-background': $undefined,
+		'success-color': $undefined,
+		'success-hover': $undefined,
+		'success-active': $undefined,
+		'success-box-shadow': $undefined,
+        'success-invert': $undefined,
+
+		'info': $undefined,
+		'info-background': $undefined,
+		'info-color': $undefined,
+		'info-hover': $undefined,
+		'info-active': $undefined,
+		'info-box-shadow': $undefined,
+        'info-invert': $undefined,
+
+		'dark': $undefined,
+		'dark-background': $undefined,
+		'dark-color': $undefined,
+		'dark-hover': $undefined,
+		'dark-active': $undefined,
+		'dark-box-shadow': $undefined,
+        'dark-invert': $undefined,
+
+		'warning': $undefined,
+		'warning-background': $undefined,
+		'warning-color': $undefined,
+		'warning-hover': $undefined,
+		'warning-active': $undefined,
+		'warning-box-shadow': $undefined,
+        'warning-invert': $undefined,
+
+		'danger': $undefined,
+		'danger-background': $undefined,
+		'danger-color': $undefined,
+		'danger-hover': $undefined,
+		'danger-active': $undefined,
+		'danger-box-shadow': $undefined,
+	)
+);
+
+// generate css variables from utilities/_theme.scss
+
+:root {
+	@each $key, $val in map-get($theme2, 'light') {
+		--#{$key}: #{$val};
+	}
+}
+
+.theme_night {
+	@each $key, $val in map-get($theme2, 'night') {
+		--#{$key}: #{$val};
+	}
+}
+
+// derived stuff, move later
+
+$info: var(--info) !default;
+$info-hover: var(--info-hover) !default;
+$info-active: var(--info-active) !default;
+$info-text: var(--info-text) !default;
+$info-background: var(--info-background) !default;
+$info-box-shadow: var(--info-box-shadow) !default;
+
+$success: var(--success) !default;
+$success-hover: var(--success-hover) !default;
+$info-active: var(--success-active) !default;
+$success-text: var(--success-text) !default;
+$success-background: var(--success-background) !default;
+$success-box-shadow: var(--success-box-shadow) !default;
+
+$warning: var(--warning) !default;
+$warning-hover: var(--warning-hover) !default;
+$info-active: var(--warning-active) !default;
+$warning-text: var(--warning-text) !default;
+$warning-background: var(--warning-background) !default;
+$warning-box-shadow: var(--warning-box-shadow) !default;
+
+$danger: var(--danger) !default;
+$danger-hover: var(--danger-hover) !default;
+$info-active: var(--danger-active) !default;
+$danger-text: var(--danger-text) !default;
+$danger-background: var(--danger-background) !default;
+$danger-box-shadow: var(--danger-box-shadow) !default;
+
+$highlight: var(--highlight) !default;
+$highlight-hover: var(--highlight-hover) !default;
+$info-active: var(--highlight-active) !default;
+$highlight-text: var(--highlight-text) !default;
+$highlight-background: var(--highlight-background) !default;
+$highlight-box-shadow: var(--highlight-box-shadow) !default;
