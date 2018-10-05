@@ -15,6 +15,16 @@ $system-grey-80: hsla(0, 0%, 18%, 1);
 $system-grey-90: hsla(0, 0%, 9%, 1);
 $system-grey-100: hsla(0, 0%, 0%, 1);
 
+$system-grey-fade-10: hsla(0, 0%, 0%, .1);
+$system-grey-fade-20: hsla(0, 0%, 0%, .2);
+$system-grey-fade-30: hsla(0, 0%, 0%, .3);
+$system-grey-fade-40: hsla(0, 0%, 0%, .4);
+$system-grey-fade-50: hsla(0, 0%, 0%, .5);
+$system-grey-fade-60: hsla(0, 0%, 0%, .6);
+$system-grey-fade-70: hsla(0, 0%, 0%, .7);
+$system-grey-fade-80: hsla(0, 0%, 0%, .8);
+$system-grey-fade-90: hsla(0, 0%, 0%, .9);
+
 // Accent shades
 $system-blue-10: hsla(205, 100%, 94%, 1);
 $system-blue-20: hsla(206, 100%, 82%, 1);
@@ -86,15 +96,15 @@ $undefined: #fff; // remove me before continuing
 $theme2: (
 	'light': (
 
-		'text': $undefined,
-		'text-light': $undefined,
-		'text-lighter': $undefined,
-		'box-shadow-light': $undefined,
-		'box-shadow-medium': $undefined,
-		'box-shadow-dark': $undefined,
-		'body-background': $undefined,
-		'body-background-dark': $undefined,
-		'body-background-static': $undefined,
+		'text': $system-grey-100,
+		'text-light':$system-grey-80
+		'text-lighter': $system-grey-70,
+		'box-shadow-light': $system-grey-fade-20,
+		'box-shadow-medium': $system-grey-fade-30,
+		'box-shadow-dark': $system-grey-fade-80,
+		'body-background': $system-grey-00,
+		'body-background-dark': $system-grey-20,
+		'body-background-static': $system-grey-00,
 		'border': $undefined,
 		'pre-background': $undefined,
 		'code-header-background': $undefined,
