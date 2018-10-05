@@ -1,3 +1,6 @@
+
+// System's base color grid. Do not use $system* variables anywhere else.
+
 $system-grey-00: hsla(0, 0%, 100%, 1);
 $system-grey-02: hsla(0, 0%, 98%, 1);
 $system-grey-05: hsla(0, 0%, 95%, 1);
@@ -10,6 +13,7 @@ $system-grey-60: hsla(0, 0%, 37%, 1);
 $system-grey-70: hsla(0, 0%, 27%, 1);
 $system-grey-80: hsla(0, 0%, 18%, 1);
 $system-grey-90: hsla(0, 0%, 9%, 1);
+$system-grey-100: hsla(0, 0%, 0%, 1);
 
 // Accent shades
 $system-blue-10: hsla(205, 100%, 94%, 1);
@@ -79,16 +83,24 @@ $system-red-90: hsla(16, 99%, 15%, 1);
 
 $undefined: #fff; // remove me before continuing
 
-// text
-// text-muted
-// body-background
-// body-background-muted ?
-// pre-background
-// code-header-background ?
-// or code-background ?
-
 $theme2: (
 	'light': (
+
+		'text': $undefined,
+		'text-light': $undefined,
+		'text-lighter': $undefined,
+		'box-shadow-light': $undefined,
+		'box-shadow-medium': $undefined,
+		'box-shadow-dark': $undefined,
+		'body-background': $undefined,
+		'body-background-dark': $undefined,
+		'body-background-static': $undefined,
+		'border': $undefined,
+		'pre-background': $undefined,
+		'code-header-background': $undefined,
+		'code-header-text': $undefined,
+		'input-background': $undefined,
+
 		'primary': $undefined,
 		'primary-background': $undefined,
 		'primary-color': $undefined,
@@ -145,6 +157,23 @@ $theme2: (
 		'danger-box-shadow': $undefined,
 	),
 	'night': (
+
+		'text': $undefined,
+		'text-light': $undefined,
+		'text-lighter': $undefined,
+		'box-shadow-light': $undefined,
+		'box-shadow-medium': $undefined,
+		'box-shadow-dark': $undefined,
+		'body-background': $undefined,
+		'body-background-dark': $undefined,
+		'body-background-ter': $undefined,
+		'body-background-static': $undefined,
+		'border': $undefined,
+		'pre-background': $undefined,
+		'code-header-background': $undefined,
+		'code-header-text': $undefined,
+		'input-background': $undefined,
+
 		'primary': $undefined,
 		'primary-background': $undefined,
 		'primary-color': $undefined,
@@ -216,39 +245,135 @@ $theme2: (
 	}
 }
 
-// derived stuff, move later
+// Derived, themed variables for use in our styles
 
-$info: var(--info) !default;
-$info-hover: var(--info-hover) !default;
-$info-active: var(--info-active) !default;
-$info-text: var(--info-text) !default;
-$info-background: var(--info-background) !default;
-$info-box-shadow: var(--info-box-shadow) !default;
+$text: var(--text);
+$text-bis: var(--text-bis);
+$text-ter: var(--text-ter);
+$box-shadow-light: var(--box-shadow-light);
+$box-shadow-medium: var(--box-shadow-medium);
+$box-shadow-dark: var(--box-shadow-dark);
+$body-background: var(--body-background);
+$body-background-bis: var(--body-background-bis);
+$body-background-ter: var(--body-background-ter);
+$body-background-static: var(--body-background-static);
+$border: var(--border);
+$pre-background: var(--pre-background);
+$code-header-background: var(--code-header-background);
+$code-header-text: var(--code-header-text);
+$input-background: var(--input-background);
 
-$success: var(--success) !default;
-$success-hover: var(--success-hover) !default;
-$info-active: var(--success-active) !default;
-$success-text: var(--success-text) !default;
-$success-background: var(--success-background) !default;
-$success-box-shadow: var(--success-box-shadow) !default;
+$primary: var(--primary);
+$primary-background: var(--primary-background);
+$primary-color: var(--primary-color);
+$primary-hover: var(--primary-hover);
+$primary-active: var(--primary-active);
+$primary-invert: var(--primary-invert);
+$primary-box-shadow: var(--primary-box-shadow);
 
-$warning: var(--warning) !default;
-$warning-hover: var(--warning-hover) !default;
-$info-active: var(--warning-active) !default;
-$warning-text: var(--warning-text) !default;
-$warning-background: var(--warning-background) !default;
-$warning-box-shadow: var(--warning-box-shadow) !default;
+$secondary: var(--secondary);
+$secondary-background: var(--secondary-background);
+$secondary-color: var(--secondary-color);
+$secondary-hover: var(--secondary-hover);
+$secondary-active: var(--secondary-active);
+$secondary-invert: var(--secondary-invert);
+$secondary-box-shadow: var(--secondary-box-shadow);
 
-$danger: var(--danger) !default;
-$danger-hover: var(--danger-hover) !default;
-$info-active: var(--danger-active) !default;
-$danger-text: var(--danger-text) !default;
-$danger-background: var(--danger-background) !default;
-$danger-box-shadow: var(--danger-box-shadow) !default;
+$success: var(--success);
+$success-background: var(--success-background);
+$success-color: var(--success-color);
+$success-hover: var(--success-hover);
+$success-active: var(--success-active);
+$success-invert: var(--success-invert);
+$success-box-shadow: var(--success-box-shadow);
 
-$highlight: var(--highlight) !default;
-$highlight-hover: var(--highlight-hover) !default;
-$info-active: var(--highlight-active) !default;
-$highlight-text: var(--highlight-text) !default;
-$highlight-background: var(--highlight-background) !default;
-$highlight-box-shadow: var(--highlight-box-shadow) !default;
+$info: var(--info);
+$info-background: var(--info-background);
+$info-color: var(--info-color);
+$info-hover: var(--info-hover);
+$info-active: var(--info-active);
+$info-invert: var(--info-invert);
+$info-box-shadow: var(--info-box-shadow);
+
+$dark: var(--dark);
+$dark-background: var(--dark-background);
+$dark-color: var(--dark-color);
+$dark-hover: var(--dark-hover);
+$dark-active: var(--dark-active);
+$dark-invert: var(--dark-invert);
+$dark-box-shadow: var(--dark-box-shadow);
+
+$warning: var(--warning);
+$warning-background: var(--warning-background);
+$warning-color: var(--warning-color);
+$warning-hover: var(--warning-hover);
+$warning-active: var(--warning-active);
+$warning-invert: var(--warning-invert);
+$warning-box-shadow: var(--warning-box-shadow);
+
+$danger: var(--danger);
+$danger-background: var(--danger-background);
+$danger-color: var(--danger-color);
+$danger-hover: var(--danger-hover);
+$danger-active: var(--danger-active);
+$danger-invert: var(--danger-invert);
+$danger-box-shadow: var(--danger-box-shadow);
+
+$colors: (
+	'primary': (
+		$primary,
+		$primary-background,
+		$primary-color,
+		$primary-hover,
+		$primary-active,
+		$primary-invert,
+		$primary-box-shadow),
+	'secondary': (
+		$secondary,
+		$secondary-background,
+		$secondary-color,
+		$secondary-hover,
+		$secondary-active,
+		$secondary-invert,
+		$secondary-box-shadow),
+	'success': (
+		$success,
+		$success-background,
+		$success-color,
+		$success-hover,
+		$success-active,
+		$success-invert,
+		$success-box-shadow),
+	'info': (
+		$info,
+		$info-background,
+		$info-color,
+		$info-hover,
+		$info-active,
+		$info-invert,
+		$info-box-shadow),
+	'dark': (
+		$dark,
+		$dark-background,
+		$dark-color,
+		$dark-hover,
+		$dark-active,
+		$dark-invert,
+		$dark-box-shadow),
+	'warning': (
+		$warning,
+		$warning-background,
+		$warning-color,
+		$warning-hover,
+		$warning-active,
+		$warning-invert,
+		$warning-box-shadow),
+	'danger': (
+		$danger,
+		$danger-background,
+		$danger-color,
+		$danger-hover,
+		$danger-active,
+		$danger-invert,
+		$danger-box-shadow),
+) !default;
