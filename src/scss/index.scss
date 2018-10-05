@@ -51,15 +51,10 @@ main {
     word-wrap: break-word;
 	white-space: pre-wrap;
     word-break: break-word;
-    display: flex;
     flex-direction: column;
 
     &.has-small-gap {
         column-gap: 16px;
-    }
-
-    > * {
-        flex: 1 1 100%;
     }
 }
 
