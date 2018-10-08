@@ -104,13 +104,8 @@ $theme2: (
 		'body-background-medium': $system-grey-00,
 		'body-background-heavy': $system-grey-20,
 		'border': $undefined,
-		// next 4 are too specific, they'll map to a more general var later
-		// 'pre-background': $undefined,
-		// 'code-header-background': $undefined,
-		// 'code-header-text': $undefined,
-		// 'input-background': $undefined,
 
-		'primary': $undefined,
+		'primary-base': $undefined,
 		'primary-background': $undefined,
 		'primary-text': $undefined,
 		'primary-hover': $undefined,
@@ -118,7 +113,7 @@ $theme2: (
 		'primary-box-shadow': $undefined,
 		'primary-invert': $undefined,
 
-		'secondary': $undefined,
+		'secondary-base': $undefined,
 		'secondary-background': $undefined,
 		'secondary-text': $undefined,
 		'secondary-hover': $undefined,
@@ -126,7 +121,7 @@ $theme2: (
 		'secondary-box-shadow': $undefined,
 		'secondary-invert': $undefined,
 
-		'success': $undefined,
+		'success-base': $undefined,
 		'success-background': $undefined,
 		'success-text': $undefined,
 		'success-hover': $undefined,
@@ -134,7 +129,7 @@ $theme2: (
 		'success-box-shadow': $undefined,
 		'success-invert': $undefined,
 
-		'info': $undefined,
+		'info-base': $undefined,
 		'info-background': $undefined,
 		'info-text': $undefined,
 		'info-hover': $undefined,
@@ -142,7 +137,7 @@ $theme2: (
 		'info-box-shadow': $undefined,
 		'info-invert': $undefined,
 
-		'dark': $undefined,
+		'dark-base': $undefined,
 		'dark-background': $undefined,
 		'dark-text': $undefined,
 		'dark-hover': $undefined,
@@ -150,7 +145,7 @@ $theme2: (
 		'dark-box-shadow': $undefined,
 		'dark-invert': $undefined,
 
-		'warning': $undefined,
+		'warning-base': $undefined,
 		'warning-background': $undefined,
 		'warning-text': $undefined,
 		'warning-hover': $undefined,
@@ -158,7 +153,7 @@ $theme2: (
 		'warning-box-shadow': $undefined,
 		'warning-invert': $undefined,
 
-		'danger': $undefined,
+		'danger-base': $undefined,
 		'danger-background': $undefined,
 		'danger-text': $undefined,
 		'danger-hover': $undefined,
@@ -177,12 +172,8 @@ $theme2: (
 		'body-background-dark': $undefined,
 		'body-background-ter': $undefined,
 		'border': $undefined,
-		'pre-background': $undefined,
-		'code-header-background': $undefined,
-		'code-header-text': $undefined,
-		'input-background': $undefined,
 
-		'primary': $undefined,
+		'primary-base': $undefined,
 		'primary-background': $undefined,
 		'primary-text': $undefined,
 		'primary-hover': $undefined,
@@ -190,7 +181,7 @@ $theme2: (
 		'primary-box-shadow': $undefined,
 		'primary-invert': $undefined,
 
-		'secondary': $undefined,
+		'secondary-base': $undefined,
 		'secondary-background': $undefined,
 		'secondary-text': $undefined,
 		'secondary-hover': $undefined,
@@ -198,7 +189,7 @@ $theme2: (
 		'secondary-box-shadow': $undefined,
 		'secondary-invert': $undefined,
 
-		'success': $undefined,
+		'success-base': $undefined,
 		'success-background': $undefined,
 		'success-text': $undefined,
 		'success-hover': $undefined,
@@ -206,7 +197,7 @@ $theme2: (
 		'success-box-shadow': $undefined,
 		'success-invert': $undefined,
 
-		'info': $undefined,
+		'info-base': $undefined,
 		'info-background': $undefined,
 		'info-text': $undefined,
 		'info-hover': $undefined,
@@ -214,7 +205,7 @@ $theme2: (
 		'info-box-shadow': $undefined,
 		'info-invert': $undefined,
 
-		'dark': $undefined,
+		'dark-base': $undefined,
 		'dark-background': $undefined,
 		'dark-text': $undefined,
 		'dark-hover': $undefined,
@@ -222,7 +213,7 @@ $theme2: (
 		'dark-box-shadow': $undefined,
 		'dark-invert': $undefined,
 
-		'warning': $undefined,
+		'warning-base': $undefined,
 		'warning-background': $undefined,
 		'warning-text': $undefined,
 		'warning-hover': $undefined,
@@ -230,7 +221,7 @@ $theme2: (
 		'warning-box-shadow': $undefined,
 		'warning-invert': $undefined,
 
-		'danger': $undefined,
+		'danger-base': $undefined,
 		'danger-background': $undefined,
 		'danger-text': $undefined,
 		'danger-hover': $undefined,
@@ -270,7 +261,7 @@ $code-header-background: var(--code-header-background);
 $code-header-text: var(--code-header-text);
 $input-background: var(--input-background);
 
-$primary: var(--primary);
+$primary-base: var(--primary-base);
 $primary-background: var(--primary-background);
 $primary-text: var(--primary-text);
 $primary-hover: var(--primary-hover);
@@ -278,7 +269,7 @@ $primary-active: var(--primary-active);
 $primary-invert: var(--primary-invert);
 $primary-box-shadow: var(--primary-box-shadow);
 
-$secondary: var(--secondary);
+$secondary-base: var(--secondary-base);
 $secondary-background: var(--secondary-background);
 $secondary-text: var(--secondary-text);
 $secondary-hover: var(--secondary-hover);
@@ -286,7 +277,7 @@ $secondary-active: var(--secondary-active);
 $secondary-invert: var(--secondary-invert);
 $secondary-box-shadow: var(--secondary-box-shadow);
 
-$success: var(--success);
+$success-base: var(--success-base);
 $success-background: var(--success-background);
 $success-text: var(--success-text);
 $success-hover: var(--success-hover);
@@ -294,7 +285,7 @@ $success-active: var(--success-active);
 $success-invert: var(--success-invert);
 $success-box-shadow: var(--success-box-shadow);
 
-$info: var(--info);
+$info-base: var(--info-base);
 $info-background: var(--info-background);
 $info-text: var(--info-text);
 $info-hover: var(--info-hover);
@@ -302,7 +293,7 @@ $info-active: var(--info-active);
 $info-invert: var(--info-invert);
 $info-box-shadow: var(--info-box-shadow);
 
-$dark: var(--dark);
+$dark-base: var(--dark-base);
 $dark-background: var(--dark-background);
 $dark-text: var(--dark-text);
 $dark-hover: var(--dark-hover);
@@ -310,7 +301,7 @@ $dark-active: var(--dark-active);
 $dark-invert: var(--dark-invert);
 $dark-box-shadow: var(--dark-box-shadow);
 
-$warning: var(--warning);
+$warning-base: var(--warning-base);
 $warning-background: var(--warning-background);
 $warning-text: var(--warning-text);
 $warning-hover: var(--warning-hover);
@@ -318,7 +309,7 @@ $warning-active: var(--warning-active);
 $warning-invert: var(--warning-invert);
 $warning-box-shadow: var(--warning-box-shadow);
 
-$danger: var(--danger);
+$danger-base: var(--danger-base);
 $danger-background: var(--danger-background);
 $danger-text: var(--danger-text);
 $danger-heavy: var(--danger-text); // change all color to heavy
@@ -327,9 +318,9 @@ $danger-active: var(--danger-active);
 $danger-invert: var(--danger-invert);
 $danger-box-shadow: var(--danger-box-shadow);
 
-$colors: (
+$framework-colors: (
 	'primary': (
-		$primary,
+		$primary-base,
 		$primary-background,
 		$primary-text,
 		$primary-hover,
@@ -338,7 +329,7 @@ $colors: (
 		$primary-box-shadow
 	),
 	'secondary': (
-		$secondary,
+		$secondary-base,
 		$secondary-background,
 		$secondary-text,
 		$secondary-hover,
@@ -347,7 +338,7 @@ $colors: (
 		$secondary-box-shadow
 	),
 	'success': (
-		$success,
+		$success-base,
 		$success-background,
 		$success-text,
 		$success-hover,
@@ -356,7 +347,7 @@ $colors: (
 		$success-box-shadow
 	),
 	'info': (
-		$info,
+		$info-base,
 		$info-background,
 		$info-text,
 		$info-hover,
@@ -365,7 +356,7 @@ $colors: (
 		$info-box-shadow
 	),
 	'dark': (
-		$dark,
+		$dark-base,
 		$dark-background,
 		$dark-text,
 		$dark-hover,
@@ -374,7 +365,7 @@ $colors: (
 		$dark-box-shadow
 	),
 	'warning': (
-		$warning,
+		$warning-base,
 		$warning-background,
 		$warning-text,
 		$warning-hover,
@@ -383,7 +374,7 @@ $colors: (
 		$warning-box-shadow
 	),
 	'danger': (
-		$danger,
+		$danger-base,
 		$danger-background,
 		$danger-text,
 		$danger-hover,
@@ -393,14 +384,42 @@ $colors: (
 	),
 ) !default;
 
-// loop nth() vars but for inline use, use vars directly
+// place index index variables in derived
 
-$effect-default: 0;
-$effect-background: 1;
-$effect-text: 2;
-$effect-hover: 3;
-$effect-active: 4;
-$effect-invert: 5;
-$effect-box-shadow: 6;
+$effect-index-base: 1;
+$effect-index-background: 2;
+$effect-index-text: 3;
+$effect-index-hover: 4;
+$effect-index-active: 5;
+$effect-index-invert: 6;
+$effect-index-box-shadow: 7;
 
-// will use nth() in func
+
+// loop for testing purposes only, delete when possible
+
+@each $name, $pair in $framework-colors {
+	$base: nth($pair, $effect-index-base);
+	$background: nth($pair, $effect-index-background);
+	$text: nth($pair, $effect-index-text);
+	$hover: nth($pair, $effect-index-hover);
+	$active: nth($pair, $effect-index-active);
+	$invert: nth($pair, $effect-index-invert);
+	$box-shadow: nth($pair, $effect-index-box-shadow);
+
+
+	.has-text-#{$name} {
+		color: $base !important;
+	}
+
+	a.has-text-#{$name} {
+
+		&:hover,
+		&:focus {
+			color: $hover !important;
+		}
+	}
+
+	.has-background-#{$name} {
+		background-color: $base !important;
+	}
+}
