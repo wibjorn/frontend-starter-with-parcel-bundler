@@ -11,6 +11,7 @@ There isn't much to this project. `parcel index.html` or `npm run start` will se
 |(for deployment) [Azure Cloud Shell](https://azure.microsoft.com/en-us/features/cloud-shell/)|
 |(for deployment) [Azure webapp Cloud Shell extension](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-html#clean-up-resources)|
 |Run `npm install`|
+|(for deployement) Run `az login`|
 
 ## Commands
 
