@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "deploy": "parcel build index.html; cd dist; cd .."
+    "build": "parcel build index.html",
+    "deploy": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./deploy.ps1"
   },
   "author": "",
   "license": "ISC",

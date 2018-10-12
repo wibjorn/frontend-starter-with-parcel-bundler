@@ -12,6 +12,15 @@ There isn't much to this project. `parcel index.html` or `npm run start` will se
 |(for deployment) [Azure webapp Cloud Shell extension](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-html#clean-up-resources)|
 |Run `npm install`|
 
+## Commands
+
+|npm  |referant  |
+|---------|---------|
+|`npm run start`|`parcel index.html`|
+|`npm run build`|`parcel build index.html`|
+|`npm run deploy`|[parcel build + Cloud Shell webapp deployment script in `./deploy.ps1`]|
+
+
 ## Deploy
 
 The following command can be run from the dist folder to deploy your app to a static hosting site on Azure: `$ az webapp up --location [azure-region] --name [your-project-name] #deploy to cloud shell`.
