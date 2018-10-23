@@ -1,0 +1,131 @@
+$user-text-direction: ltr !default;
+$content-text-direction: ltr !default;
+
+$user-left: if($user-text-direction == rtl, right, left);
+$user-right: if($user-text-direction == rtl, left, right);
+
+$content-left: if($content-text-direction == rtl, right, left);
+$content-right: if($content-text-direction == rtl, left, right);
+
+// modified below
+
+$marginKey: 'margin';
+$paddingKey: 'padding';
+$separator: '-';
+
+$class-positions: (
+	('top',
+	'right',
+	'bottom',
+	'left')
+);
+
+$content-positions: (
+    ('top',
+    $content-right,
+    'bottom',
+    $content-left)
+);
+
+$user-positions: (
+    ('top',
+    $user-right,
+    'bottom',
+    $user-left)
+);
+
+$spacing-sizes: (
+	('none', $spacing-0),
+	('extra-small', $spacing-1),
+	('small', $spacing-2),
+	('medium', $spacing-3),
+	('large', $spacing-4),
+	('extra-large', $spacing-5),
+	('super-large', $spacing-6)
+);
+
+@function sizeValue($key, $value) {
+	@return if($key == 'none', 0, $value);
+}
+
+@each $size in $spacing-sizes {
+	$sizeKey: nth($size, 1);
+	$sizeValue: nth($size, 2);
+
+	// .has-margin-large
+
+	.has-#{$marginKey}#{$separator}#{$sizeKey} {
+		margin: sizeValue($sizeKey, $sizeValue) !important;
+	}
+
+	// .has-padding-medium
+
+	.has-#{$paddingKey}#{$separator}#{$sizeKey} {
+		padding: sizeValue($sizeKey, $sizeValue) !important;
+	}
+
+	@include mobile {
+
+		.has-#{$marginKey}#{$separator}#{$sizeKey}-mobile {
+			margin: sizeValue($sizeKey, $sizeValue) !important;
+		}
+
+		.has-#{$paddingKey}#{$separator}#{$sizeKey}-mobile {
+			padding: sizeValue($sizeKey, $sizeValue) !important;
+		}
+	}
+
+	@each $position in $class-positions {
+
+		// .has-margin-top-large
+
+		.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey} {
+			margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+		}
+
+		// .has-padding-bottom-extra-small
+
+		.has-#{$paddingKey}#{$separator}#{$position}#{$separator}#{$sizeKey} {
+			padding-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+		}
+
+		@include desktop {
+
+			.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-desktop {
+				margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-#{$paddingKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-desktop {
+				padding-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-desktop-not-interactive {
+				@include not-interactive {
+					margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+				}
+			}
+		}
+
+		@include tablet {
+
+			.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-tablet {
+				margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-#{$paddingKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-tablet {
+				padding-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+		}
+
+		@include mobile {
+
+			.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-mobile {
+				margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-#{$paddingKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-mobile {
+				padding-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+		}
+	}
+}
