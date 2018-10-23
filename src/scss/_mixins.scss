@@ -1,0 +1,125 @@
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 64px !default;
+
+// Non-Bulma breakpoint for added mobile flexibility, see mixins.
+$mobile-lg: 480px;
+
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 768px !default;
+
+// 960px container + 4rem
+$desktop: 960px + 2 * $gap !default; // -> 1088
+
+// 1152px container + 4rem
+$widescreen: 1152px + 2 * $gap !default; // -> 1280
+$widescreen-enabled: true !default;
+
+// 1344px container + 4rem
+$fullhd: 1344px + 2 * $gap !default; // -> 1472
+$fullhd-enabled: true !default;
+
+@mixin not-interactive {
+
+	html:not(.has-interactive) & {
+		@content;
+	}
+}
+
+@mixin mobile-sm {
+	@media screen and (max-width: $mobile-lg - 1) {
+		@content;
+	}
+}
+
+@mixin mobile-lg-only {
+	@media screen and (min-width: $mobile-lg) and (max-width: $tablet - 1) {
+		@content;
+	}
+}
+
+@mixin mobile-lg {
+	@media screen and (min-width: $mobile-lg), print {
+		@content;
+	}
+}
+
+// Standard Bulma breakpoints
+
+@mixin mobile {
+	@media screen and (max-width: $tablet - 1px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (min-width: $tablet), print {
+		@content;
+	}
+}
+
+@mixin tablet-only {
+	@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+		@content;
+	}
+}
+
+@mixin touch {
+	@media screen and (max-width: $desktop - 1px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: $desktop) {
+		@content;
+	}
+}
+
+@mixin desktop-only {
+	@if $widescreen-enabled {
+		@media screen and (min-width: $desktop) and (max-width: $widescreen - 1px) {
+			@content;
+		}
+	}
+}
+
+@mixin until-widescreen {
+	@if $widescreen-enabled {
+		@media screen and (max-width: $widescreen - 1px) {
+			@content;
+		}
+	}
+}
+
+@mixin widescreen {
+	@if $widescreen-enabled {
+		@media screen and (min-width: $widescreen) {
+			@content;
+		}
+	}
+}
+
+@mixin widescreen-only {
+	@if $widescreen-enabled and $fullhd-enabled {
+		@media screen and (min-width: $widescreen) and (max-width: $fullhd - 1px) {
+			@content;
+		}
+	}
+}
+
+@mixin until-fullhd {
+	@if $fullhd-enabled {
+		@media screen and (max-width: $fullhd - 1px) {
+			@content;
+		}
+	}
+}
+
+@mixin fullhd {
+	@if $fullhd-enabled {
+		@media screen and (min-width: $fullhd) {
+			@content;
+		}
+	}
+}

@@ -7,6 +7,14 @@ $user-right: if($user-text-direction == rtl, left, right);
 $content-left: if($content-text-direction == rtl, right, left);
 $content-right: if($content-text-direction == rtl, left, right);
 
+$spacing-0: 0 !default; // 0
+$spacing-1: .25rem !default; // 4px
+$spacing-2: .5rem !default; // 8px
+$spacing-3: 1rem !default; // 16px
+$spacing-4: 1.5rem !default; // 24px
+$spacing-5: 3rem !default; // 48px
+$spacing-6: 6rem !default; // 96px;
+
 // modified below
 
 $marginKey: 'margin';
@@ -75,56 +83,116 @@ $spacing-sizes: (
 		}
 	}
 
-	@each $position in $class-positions {
+	@for $i from 1 through 4 {
+        $class-position: nth($class-positions, $i);
+        $content-position: nth($content-positions, $i);
+        $user-position: nth($user-positions, $i);
+
+        // default margin-padding-helpers affect content
 
 		// .has-margin-top-large
 
-		.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey} {
-			margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+		.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
+			margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 		}
 
 		// .has-padding-bottom-extra-small
 
-		.has-#{$paddingKey}#{$separator}#{$position}#{$separator}#{$sizeKey} {
-			padding-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+		.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
+			padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 		}
 
 		@include desktop {
 
-			.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-desktop {
-				margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
+				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 
-			.has-#{$paddingKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-desktop {
-				padding-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
+				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 
-			.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-desktop-not-interactive {
+			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop-not-interactive {
 				@include not-interactive {
-					margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+					margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 				}
 			}
 		}
 
 		@include tablet {
 
-			.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-tablet {
-				margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
+				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 
-			.has-#{$paddingKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-tablet {
-				padding-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
+				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 		}
 
 		@include mobile {
 
-			.has-#{$marginKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-mobile {
-				margin-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
+				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 
-			.has-#{$paddingKey}#{$separator}#{$position}#{$separator}#{$sizeKey}-mobile {
-				padding-#{$position}: sizeValue($sizeKey, $sizeValue) !important;
+			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
+				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+        }
+
+        // -user- margin and padding helpers affect chrome
+
+        // .has-margin-top-large
+
+        // .has-user-margin-left-none
+
+		.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
+			margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+		}
+
+		// .has-user-padding-bottom-extra-small
+
+		.has-user-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
+			padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+		}
+
+		@include desktop {
+
+			.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
+				margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-user-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
+				padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop-not-interactive {
+				@include not-interactive {
+					margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+				}
+			}
+		}
+
+		@include tablet {
+
+			.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
+				margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-user-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
+				padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+		}
+
+		@include mobile {
+
+			.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
+				margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-user-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
+				padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 		}
 	}
