@@ -93,81 +93,26 @@ $spacing-sizes: (
 		// .has-margin-top-large
 
 		.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
-			margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+			margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 		}
 
 		// .has-padding-bottom-extra-small
 
 		.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
-			padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
-		}
-
-		@include desktop {
-
-			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
-				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
-			}
-
-			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
-				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
-			}
-
-			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop-not-interactive {
-				@include not-interactive {
-					margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
-				}
-			}
-		}
-
-		@include tablet {
-
-			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
-				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
-			}
-
-			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
-				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
-			}
-		}
-
-		@include mobile {
-
-			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
-				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
-			}
-
-			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
-				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
-			}
-        }
-
-        // -user- margin and padding helpers affect chrome
-
-        // .has-margin-top-large
-
-        // .has-user-margin-left-none
-
-		.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
-			margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
-		}
-
-		// .has-user-padding-bottom-extra-small
-
-		.has-user-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
 			padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 		}
 
 		@include desktop {
 
-			.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
+			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
 				margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 
-			.has-user-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
+			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
 				padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 
-			.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop-not-interactive {
+			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop-not-interactive {
 				@include not-interactive {
 					margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 				}
@@ -176,23 +121,74 @@ $spacing-sizes: (
 
 		@include tablet {
 
-			.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
+			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
 				margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 
-			.has-user-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
+			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
 				padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 		}
 
 		@include mobile {
 
-			.has-user-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
+			.has-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
 				margin-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 
-			.has-user-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
+			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
 				padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+        }
+
+        // -content- margin and padding should be used in content
+
+		.has-content-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
+			margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+		}
+
+		// .has-content-padding-bottom-extra-small
+
+		.has-content-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
+			padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+		}
+
+		@include desktop {
+
+			.has-content-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
+				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-content-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop {
+				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-content-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-desktop-not-interactive {
+				@include not-interactive {
+					margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+				}
+			}
+		}
+
+		@include tablet {
+
+			.has-content-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
+				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-content-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-tablet {
+				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+		}
+
+		@include mobile {
+
+			.has-content-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
+				margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
+			}
+
+			.has-content-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
+				padding-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
 		}
 	}
