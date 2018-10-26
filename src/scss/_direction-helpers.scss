@@ -84,11 +84,9 @@ $spacing-sizes: (
 	}
 
 	@for $i from 1 through 4 {
-        $class-position: nth($class-positions, $i);
-        $content-position: nth($content-positions, $i);
-        $user-position: nth($user-positions, $i);
-
-        // default margin-padding-helpers affect content
+		$class-position: nth($class-positions, $i);
+		$content-position: nth($content-positions, $i);
+		$user-position: nth($user-positions, $i);
 
 		// .has-margin-top-large
 
@@ -139,9 +137,9 @@ $spacing-sizes: (
 			.has-#{$paddingKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey}-mobile {
 				padding-#{$user-position}: sizeValue($sizeKey, $sizeValue) !important;
 			}
-        }
+		}
 
-        // -content- margin and padding should be used in content
+		// -content- margin and padding should be used in content
 
 		.has-content-#{$marginKey}#{$separator}#{$class-position}#{$separator}#{$sizeKey} {
 			margin-#{$content-position}: sizeValue($sizeKey, $sizeValue) !important;
